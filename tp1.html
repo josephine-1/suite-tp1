@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="tp1.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tp1</title>
+   
+</head>
+<body>
+    <!--------------------------------START ENTETE-------------------------------------------------->
+    <div class="nav">
+        <div class="image">
+             <img src="image/logo.png" alt="logo-simplon" width="150px"> 
+        </div>
+    </div>
+    <!--------------------------------END ENTETE-------------------------------------------------->
+    <!--------------------------------START SECTION POUR LES BLOCS------------------------------->
+ <section>
+    <div id="Container">
+        <h4>Mon Premier tp:Joséphine Diop</h4>
+        <div class="premiere">
+            <div class="style-bloc"><p>bloc1</p></div>
+            <div class="style-bloc"><p>bloc2</p></div>
+        </div>
+        <div class="premiere">
+            <div class="style-bloc"><p>bloc3</p></div>
+            <div class="style-bloc"><p>bloc4</p></div>
+        </div>
+        <div class="btn">
+            <button id="button" onclick="change()" >Click</button>
+         </div>
+          <!--------------------------Partie Formulaire------------------------------------------->
+         <div class="sec2">
+<h2>Formulaire de Contact avec les données stockés</h2>
+            <form method="post" id="myForm">
+               
+                <fieldset>
+                    <legend><strong>Nom et Prénom</strong></legend>
+                     <label for="name">Saisissez Votre nom:</label><br>
+                     <input type="text" id="nom"  name="user_name" placeholder="Nom" ><br><br>
+        
+                     <label for="Prenom">Saisissez Votre Prenom:</label><br>
+                     <input type="text" id="prenom" name="user_prenom" placeholder="Prenom" ><br><br>
+                
+                     <label for="mail">e-mail:</label><br>
+                     <input type="email" id="mail" name="user_mail" placeholder="votre adresse mail" ><br><br>
+                 </fieldset>   
+                 <fieldset>
+                    <legend><strong>Commentaire</strong></legend>
+                    <textarea name="textformulaire" id="textformulaire" cols="30" rows="10">
+
+                    </textarea>
+                 </fieldset><br>
+                 <span id="error"></span>
+                 
+                    <button id="bt"  >Envoyer</button>
+                  
+                     
+            </form>
+            <h2>Recupération des Données</h2>
+
+                     
+                     <p>Le nom est :<span id="leNom"></span></p>
+                     <p>Le prénom est :<span id="lePrenom"></span></p>
+                     <p>Le texte que vous avez entré :<span id="leTextformulaire"></span></p>
+        </div>
+        </div>    
+       
+       
+
+       
+</section>
+
+
+
+
+<!--------------------------------END SECTION POUR LES BLOCS----------------------------------->
+
+<script src="script.js"></script>
+</body>
+</html>
