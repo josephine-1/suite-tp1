@@ -30,9 +30,35 @@ function change() {
  
 }
 //Partie Formulaire
-let myForm = document.getElementById('bt');
-myForm.addEventListener('click',function(e){
+let bouton = document.getElementById('bt');
+bouton.addEventListener('click',function(e){
     
+    
+
+//Recupération des données du formulaire
+    var nom = document.getElementById("nom").value;
+    console.log(nom);
+    var prenom = document.getElementById("prenom").value;
+    console.log(prenom);
+    var mail = document.getElementById("mail").value;
+    console.log(mail); 
+    var textformulaire = document.getElementById("textformulaire").value;
+    console.log(textformulaire);
+//stocker les saisies dans le local storage
+    localStorage.setItem('nom', nom);//enregistre le couple clé valeur
+    localStorage.setItem('prenom', prenom);
+    localStorage.setItem('commentaire', textformulaire);
+ //Récupérer et affichage des données sur la page
+    var monNom = localStorage.getItem('nom');//retourne la valeur associée aux clés
+    document.querySelector("#leNom").innerHTML = monNom ;
+    var monPrenom = localStorage.getItem('prenom');
+    document.querySelector("#lePrenom").innerHTML = monPrenom ;
+    var leText = localStorage.getItem('commentaire');
+    document.querySelector("#leTextformulaire").innerHTML = leText ;
+
+    e.preventDefault();
+//controle de saisie
+
     let myname = document.getElementById('nom');
     let myprenom = document.getElementById('prenom');
     let mymail = document.getElementById('mail');
@@ -57,39 +83,6 @@ myForm.addEventListener('click',function(e){
         e.preventDefault();
     }
 
-
-    var nom = document.getElementById("nom").value;
-    console.log(nom);
-    
-    var prenom = document.getElementById("prenom").value;
-    console.log(prenom);
-     
-    var mail = document.getElementById("mail").value;
-    console.log(mail); 
-    var textformulaire = document.getElementById("textformulaire").value;
-    console.log(textformulaire);
-
-    localStorage.setItem('nom', nom);
-    var leNom = localStorage.getItem('nom');
-    document.querySelector("#leNom").innerHTML = leNom ;
-
-    localStorage.setItem('prenom', prenom);
-    var lePrenom = localStorage.getItem('prenom');
-    document.querySelector("#lePrenom").innerHTML = lePrenom ;
-
-    
-   
-    localStorage.setItem('commentaire', textformulaire);
-    var leTextformulaire = localStorage.getItem('commentaire');
-    document.querySelector("#leTextformulaire").innerHTML = leTextformulaire ;
-
-    e.preventDefault();
-
 })
 
-//Récupération des données
-
-/* function recupere(){
-    
-} */
 

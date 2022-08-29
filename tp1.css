@@ -2,6 +2,7 @@ body{
     background-image: url(image/etudiante.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    
   /*  position: relative;*/
     font-family: system-ui;
     font-size: 20px;
@@ -13,8 +14,8 @@ body{
     
 }
 .image{
-    position:absolute;
-    right: 0;
+    height: 400px;
+    width: 100%;
     
 }
 /*Style pour la deuxiéme Section*/

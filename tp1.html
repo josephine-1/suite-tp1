@@ -34,7 +34,7 @@
           <!--------------------------Partie Formulaire------------------------------------------->
          <div class="sec2">
 <h2>Formulaire de Contact avec les données stockés</h2>
-            <form method="post" id="myForm">
+            <form method="post">
                
                 <fieldset>
                     <legend><strong>Nom et Prénom</strong></legend>
@@ -53,15 +53,13 @@
 
                     </textarea>
                  </fieldset><br>
+                 <!-----------------POur controle d'erreur-------------------------->
                  <span id="error"></span>
-                 
-                    <button id="bt"  >Envoyer</button>
-                  
+                 <!------------Pour le bouton----------->
+                    <button id="bt">Envoyer</button>
                      
             </form>
             <h2>Recupération des Données</h2>
-
-                     
                      <p>Le nom est :<span id="leNom"></span></p>
                      <p>Le prénom est :<span id="lePrenom"></span></p>
                      <p>Le texte que vous avez entré :<span id="leTextformulaire"></span></p>
